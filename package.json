@@ -1,0 +1,25 @@
+{
+  "name": "dom-children",
+  "version": "0.0.0",
+  "description": "Functions for modifying DOM elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "fox"
+  },
+  "devDependencies": {
+    "fox": "*"
+  },
+  "keywords": [
+    "dom"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/dom-children.git",
+    "type": "git"
+  },
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "license": "BSD",
+  "dependencies": {
+    "select-dom": "0.0.x",
+    "new-element": "0.0.x"
+  }
+}
