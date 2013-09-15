@@ -1,6 +1,6 @@
 ## dom-children
 
-Functions for modifying DOM elements
+Library to modify DOM 
 
 Example:
 
