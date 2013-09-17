@@ -2,9 +2,9 @@ var newElement = require("./new-element");
 var select = require('./select');
 
 module.exports = {
-  add: add,
-  addAfter: addAfter,
-  addBefore: addBefore,
+  add: withChildren(add),
+  addAfter: withChildren(addAfter),
+  addBefore: withChildren(addBefore),
   insert: insert,
   replace: replace,
   remove: remove
@@ -56,4 +56,19 @@ function remove (element, child) {
     all[i].parentNode.removeChild(all[i]);
   }
 
+}
+
+function withChildren (fn) {
+  return function (_, children) {
+    if (!Array.isArray(children)) children = [children];
+
+    var i = -1;
+    var len = children.length;
+    var params = Array.prototype.slice.call(arguments);
+
+    while (++i < len) {
+      params[1] = children[i];
+      fn.apply(undefined, params);
+    }
+  };
 }

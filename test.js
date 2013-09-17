@@ -17,6 +17,13 @@ describe('.add(element, child)', function(){
     expect(ul.lastChild).to.equal(bar);
   });
 
+  it('adds array of elements', function(){
+    children.add(ul, [bar, '<li>corge</li><li>span</li>']);
+    expect(ul.lastChild.previousSibling.previousSibling).to.equal(bar);
+    expect(ul.lastChild.previousSibling.innerHTML).to.equal('corge');
+    expect(ul.lastChild.innerHTML).to.equal('span');
+  });
+
   it('parses HTML if required', function(){
     children.add('ul', '<li class="{name}">{name}</li>', { name: 'corge' });
     expect(ul.lastChild).to.equal(document.querySelector('li.corge'));
