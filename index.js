@@ -39,7 +39,7 @@ function insert (element /*[,vars], parent */) {
 }
 
 function replace (parent, target, repl, vars) {
-  select(parent).replaceChild(newElement(repl, vars), select(target, parent));
+  select(parent).replaceChild(select(newElement(repl, vars)), select(target, parent));
 }
 
 function remove (element, child) {

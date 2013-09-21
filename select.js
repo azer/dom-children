@@ -4,6 +4,10 @@ module.exports = ifNecessary;
 module.exports.all = ifNecessaryAll;
 
 function ifNecessary (child, parent) {
+  if (Array.isArray(child)) {
+    child = child[0];
+  }
+
   if ( typeof child != 'string') {
     return child;
   }
@@ -16,6 +20,10 @@ function ifNecessary (child, parent) {
 }
 
 function ifNecessaryAll (child, parent) {
+  if (Array.isArray(child)) {
+    child = child[0];
+  }
+
   if ( typeof child != 'string') {
     return [child];
   }
