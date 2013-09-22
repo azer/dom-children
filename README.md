@@ -30,11 +30,11 @@ add('.content', '<div>hello</div>')
 add('.content', '<h1>{title}</h1>', { title: 'Hello!' })
 ```
 
-### addAfter(element, child, reference)
+### addAfter(parent, child, reference)
 
 Similar to `addBefore`
 
-### addBefore(element, child, reference)
+### addBefore(parent, child, reference)
 
 ```js
 addBefore(document.body, document.createElement('textarea'), document.body.firstChild)
@@ -51,7 +51,7 @@ insert('<input />', '.content')
 insert('<h1>{title}</h1>', { title: 'hello' }, '.content')
 ```
 
-### replace(element, target, replacement)
+### replace(parent, target, replacement)
 
 replace `target` with `replacement`
 
