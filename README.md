@@ -5,6 +5,8 @@ Library to modify DOM
 Example:
 
 ```js
+add = require('dom-children').add
+
 add(document.body, '<h1>{title}</h1>{content}', {
   title: 'Hello',
   content: 'Welcome!'
