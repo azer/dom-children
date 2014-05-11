@@ -1,3 +1,7 @@
+# Deprecated
+
+Please use [npm-dom/dom-tree](http://github.com/npm-dom/dom-tree) instead.
+
 ## dom-children
 
 Library to modify DOM 
